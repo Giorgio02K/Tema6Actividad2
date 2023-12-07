@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/common_padding_default"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/ivAccountIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/bank"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvNumeroCuenta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ivAccountIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvSaldoActual"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Cuenta: 123456789"
+        android:layout_marginLeft="8dp"
+        />
+
+    <TextView
+        android:id="@+id/tvSaldoActual"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toEndOf="@+id/ivAccountIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumeroCuenta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Saldo: $1,000.00"
+        android:layout_marginLeft="8dp"
+        />
+
+    <!-- Agrega más elementos de diseño según sea necesario -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
